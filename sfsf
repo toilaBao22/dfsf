@@ -1,0 +1,236 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local nuthienmenuchinh = Instance.new("TextButton")
+local khungmenuchinh = Instance.new("Frame")
+local khungmenuchinh2 = Instance.new("ScrollingFrame")
+local nutteletocastle = Instance.new("TextButton")
+local hienteletocastle = Instance.new("TextLabel")
+local nutteletoend = Instance.new("TextButton")
+local hienteletoend = Instance.new("TextLabel")
+local nutteletotesla = Instance.new("TextButton")
+local hienteletotesla = Instance.new("TextLabel")
+local nutteletophaodai = Instance.new("TextButton")
+local hienteletophaodai = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+nuthienmenuchinh.Name = "nut hien menu chinh"
+nuthienmenuchinh.Parent = ScreenGui
+nuthienmenuchinh.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+nuthienmenuchinh.BorderColor3 = Color3.fromRGB(0, 0, 0)
+nuthienmenuchinh.BorderSizePixel = 0
+nuthienmenuchinh.Position = UDim2.new(0.0702772439, 0, 0.202283844, 0)
+nuthienmenuchinh.Size = UDim2.new(0, 79, 0, 50)
+nuthienmenuchinh.Font = Enum.Font.SourceSans
+nuthienmenuchinh.TextColor3 = Color3.fromRGB(0, 0, 0)
+nuthienmenuchinh.TextSize = 14.000
+
+khungmenuchinh.Name = "khungmenuchinh"
+khungmenuchinh.Parent = ScreenGui
+khungmenuchinh.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+khungmenuchinh.BackgroundTransparency = 0.400
+khungmenuchinh.BorderColor3 = Color3.fromRGB(0, 0, 0)
+khungmenuchinh.BorderSizePixel = 0
+khungmenuchinh.Position = UDim2.new(0.170212761, 0, 0.0505709611, 0)
+khungmenuchinh.Size = UDim2.new(0, 334, 0, 557)
+
+khungmenuchinh2.Name = "khungmenuchinh2"
+khungmenuchinh2.Parent = khungmenuchinh
+khungmenuchinh2.Active = true
+khungmenuchinh2.BackgroundColor3 = Color3.fromRGB(172, 255, 127)
+khungmenuchinh2.BackgroundTransparency = 0.350
+khungmenuchinh2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+khungmenuchinh2.BorderSizePixel = 0
+khungmenuchinh2.Position = UDim2.new(0.0962370932, 0, 0.0851567537, 0)
+khungmenuchinh2.Size = UDim2.new(0, 268, 0, 509)
+
+nutteletocastle.Name = "nutteletocastle"
+nutteletocastle.Parent = khungmenuchinh2
+nutteletocastle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+nutteletocastle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+nutteletocastle.BorderSizePixel = 0
+nutteletocastle.Position = UDim2.new(0.74253732, 0, 0.0153089119, 0)
+nutteletocastle.Size = UDim2.new(0, 42, 0, 47)
+nutteletocastle.Font = Enum.Font.SourceSans
+nutteletocastle.Text = ""
+nutteletocastle.TextColor3 = Color3.fromRGB(0, 0, 0)
+nutteletocastle.TextSize = 14.000
+
+hienteletocastle.Name = "hienteletocastle"
+hienteletocastle.Parent = khungmenuchinh2
+hienteletocastle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+hienteletocastle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+hienteletocastle.BorderSizePixel = 0
+hienteletocastle.Position = UDim2.new(-0.0335820913, 0, 0.0137524558, 0)
+hienteletocastle.Size = UDim2.new(0, 200, 0, 50)
+hienteletocastle.Font = Enum.Font.SourceSans
+hienteletocastle.Text = "tele to castle"
+hienteletocastle.TextColor3 = Color3.fromRGB(0, 0, 0)
+hienteletocastle.TextSize = 22.000
+hienteletocastle.TextWrapped = true
+
+nutteletoend.Name = "nutteletoend"
+nutteletoend.Parent = khungmenuchinh2
+nutteletoend.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+nutteletoend.BorderColor3 = Color3.fromRGB(0, 0, 0)
+nutteletoend.BorderSizePixel = 0
+nutteletoend.Position = UDim2.new(0.74253732, 0, 0.0722863674, 0)
+nutteletoend.Size = UDim2.new(0, 42, 0, 47)
+nutteletoend.Font = Enum.Font.SourceSans
+nutteletoend.Text = ""
+nutteletoend.TextColor3 = Color3.fromRGB(0, 0, 0)
+nutteletoend.TextSize = 14.000
+
+hienteletoend.Name = "hienteletoend"
+hienteletoend.Parent = khungmenuchinh2
+hienteletoend.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+hienteletoend.BorderColor3 = Color3.fromRGB(0, 0, 0)
+hienteletoend.BorderSizePixel = 0
+hienteletoend.Position = UDim2.new(-0.0335820913, 0, 0.0713815466, 0)
+hienteletoend.Size = UDim2.new(0, 200, 0, 44)
+hienteletoend.Font = Enum.Font.SourceSans
+hienteletoend.Text = "tele to end"
+hienteletoend.TextColor3 = Color3.fromRGB(0, 0, 0)
+hienteletoend.TextSize = 22.000
+hienteletoend.TextWrapped = true
+
+nutteletotesla.Name = "nutteletotesla"
+nutteletotesla.Parent = khungmenuchinh2
+nutteletotesla.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+nutteletotesla.BorderColor3 = Color3.fromRGB(0, 0, 0)
+nutteletotesla.BorderSizePixel = 0
+nutteletotesla.Position = UDim2.new(0.74253732, 0, 0.126772121, 0)
+nutteletotesla.Size = UDim2.new(0, 42, 0, 47)
+nutteletotesla.Font = Enum.Font.SourceSans
+nutteletotesla.Text = ""
+nutteletotesla.TextColor3 = Color3.fromRGB(0, 0, 0)
+nutteletotesla.TextSize = 14.000
+
+hienteletotesla.Name = "hienteletotesla"
+hienteletotesla.Parent = khungmenuchinh2
+hienteletotesla.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+hienteletotesla.BorderColor3 = Color3.fromRGB(0, 0, 0)
+hienteletotesla.BorderSizePixel = 0
+hienteletotesla.Position = UDim2.new(-0.0335820913, 0, 0.124401249, 0)
+hienteletotesla.Size = UDim2.new(0, 200, 0, 50)
+hienteletotesla.Font = Enum.Font.SourceSans
+hienteletotesla.Text = "tele to tesla"
+hienteletotesla.TextColor3 = Color3.fromRGB(0, 0, 0)
+hienteletotesla.TextSize = 22.000
+hienteletotesla.TextWrapped = true
+
+nutteletophaodai.Name = "nutteletophaodai"
+nutteletophaodai.Parent = khungmenuchinh2
+nutteletophaodai.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+nutteletophaodai.BorderColor3 = Color3.fromRGB(0, 0, 0)
+nutteletophaodai.BorderSizePixel = 0
+nutteletophaodai.Position = UDim2.new(0.74253732, 0, 0.187080815, 0)
+nutteletophaodai.Size = UDim2.new(0, 42, 0, 47)
+nutteletophaodai.Font = Enum.Font.SourceSans
+nutteletophaodai.Text = ""
+nutteletophaodai.TextColor3 = Color3.fromRGB(0, 0, 0)
+nutteletophaodai.TextSize = 14.000
+
+hienteletophaodai.Name = "hienteletophaodai"
+hienteletophaodai.Parent = khungmenuchinh2
+hienteletophaodai.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+hienteletophaodai.BorderColor3 = Color3.fromRGB(0, 0, 0)
+hienteletophaodai.BorderSizePixel = 0
+hienteletophaodai.Position = UDim2.new(-0.0335820913, 0, 0.187269613, 0)
+hienteletophaodai.Size = UDim2.new(0, 200, 0, 50)
+hienteletophaodai.Font = Enum.Font.SourceSans
+hienteletophaodai.Text = "tele to pháo đài"
+hienteletophaodai.TextColor3 = Color3.fromRGB(0, 0, 0)
+hienteletophaodai.TextSize = 22.000
+hienteletophaodai.TextWrapped = true
+
+-- Scripts:
+
+local function RAJBMMC_fake_script() -- nutteletocastle.Script 
+	local script = Instance.new('Script', nutteletocastle)
+
+	local nutteletocastle = script.Parent
+	nutteletocastle.MouseButton1Click:Connect(function()
+		nutteletocastle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		if nutteletocastle.BackgroundColor3 == Color3.fromRGB(255, 255, 255) then
+			nutteletocastle.BackgroundColor3 = Color3.fromRGB(0, 0, 0) 	
+		end
+		if nutteletocastle.BackgroundColor3 == Color3.fromRGB(0, 0, 0) then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/2dfeta/LamViet/refs/heads/main/Castletp.lua"))()
+			task.wait()
+			nutteletocastle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			end
+	end)
+	
+end
+coroutine.wrap(RAJBMMC_fake_script)()
+local function TGDAXEG_fake_script() -- nutteletoend.Script 
+	local script = Instance.new('Script', nutteletoend)
+
+	local nutteletoend = script.Parent
+	nutteletoend.MouseButton1Click:Connect(function()
+		nutteletoend.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		if nutteletoend.BackgroundColor3 == Color3.fromRGB(255, 255, 255) then
+			nutteletoend.BackgroundColor3 = Color3.fromRGB(0, 0, 0) 	
+		end
+		if nutteletoend.BackgroundColor3 == Color3.fromRGB(0, 0, 0) then
+			--[[
+		WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+	]]
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/2dfeta/LamViet/refs/heads/main/teleport_to_end.lua"))()
+			task.wait()
+			nutteletoend.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			end
+	end)
+	
+end
+coroutine.wrap(TGDAXEG_fake_script)()
+local function RSEB_fake_script() -- nutteletotesla.Script 
+	local script = Instance.new('Script', nutteletotesla)
+
+	local nutteletotesla = script.Parent
+	nutteletotesla.MouseButton1Click:Connect(function()
+		nutteletotesla.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		if nutteletotesla.BackgroundColor3 == Color3.fromRGB(255, 255, 255) then
+			nutteletotesla.BackgroundColor3 = Color3.fromRGB(0, 0, 0) 	
+		end
+		if nutteletotesla.BackgroundColor3 == Color3.fromRGB(0, 0, 0) then
+			--[[
+		WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+	]]
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/2dfeta/LamViet/refs/heads/main/Tptotesla%20(1).lua"))()
+			task.wait()
+			nutteletotesla.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			end
+	end)
+	
+end
+coroutine.wrap(RSEB_fake_script)()
+local function ZHNXYG_fake_script() -- nutteletophaodai.Script 
+	local script = Instance.new('Script', nutteletophaodai)
+
+	local nutteletophaodai = script.Parent
+	nutteletophaodai.MouseButton1Click:Connect(function()
+		nutteletophaodai.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		if nutteletophaodai.BackgroundColor3 == Color3.fromRGB(255, 255, 255) then
+			nutteletophaodai.BackgroundColor3 = Color3.fromRGB(0, 0, 0) 	
+		end
+		if nutteletophaodai.BackgroundColor3 == Color3.fromRGB(0, 0, 0) then
+			--[[
+		WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+	]]
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/2dfeta/LamViet/refs/heads/main/Tpfort.lua"))()
+			task.wait()
+			nutteletophaodai.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			end
+	end)
+	
+end
+coroutine.wrap(ZHNXYG_fake_script)()
