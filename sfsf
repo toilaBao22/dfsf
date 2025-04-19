@@ -6,7 +6,7 @@ game.StarterGui:SetCore("SendNotification", {
 
 game.StarterGui:SetCore("SendNotification", {
     Title = "How to open menu??";
-    Text = " Alt Right  to open menu ";
+    Text = " Alt Right  to open menu "; 
     Duration = 10;
 })
 
