@@ -1,3 +1,15 @@
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Script Bao X Viet Hub";
+    Text = "Make  by Bao and Viet ";
+    Duration = 10;
+})
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "How to open menu??";
+    Text = " Alt Right  to open menu ";
+    Duration = 10;
+})
+
 local UserInputService = game:GetService("UserInputService")
 
 local ScreenGui = Instance.new("ScreenGui")
@@ -14,10 +26,8 @@ local teletofort = Instance.new("TextButton")
 local teletotrain = Instance.new("TextButton")
 local fixlag = Instance.new("TextButton")
 
--- Setup GUI
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
--- Button hiển thị trạng thái
 hienanmenu.Name = "hienanmenu"
 hienanmenu.Parent = ScreenGui
 hienanmenu.Active = true
@@ -26,20 +36,18 @@ hienanmenu.BackgroundTransparency = 0.500
 hienanmenu.Position = UDim2.new(0.871, 0, 0.918, 0)
 hienanmenu.Size = UDim2.new(0, 200, 0, 50)
 hienanmenu.Font = Enum.Font.SourceSans
-hienanmenu.Text = "ON"
-hienanmenu.TextColor3 = Color3.fromRGB(62, 255, 32)
+hienanmenu.Text = "OFF"
+		hienanmenu.TextColor3 = Color3.fromRGB(255, 0, 0)
 hienanmenu.TextSize = 44.000
 
--- Menu chính
 menuchinh.Name = "menuchinh"
 menuchinh.Parent = ScreenGui
 menuchinh.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 menuchinh.BackgroundTransparency = 0.300
 menuchinh.Position = UDim2.new(0.008, 0, 0.007, 0)
 menuchinh.Size = UDim2.new(0, 1892, 0, 870)
-menuchinh.Visible = true
+menuchinh.Visible = false
 
--- Tiêu đề Hub
 Tenhub.Name = "Tenhub"
 Tenhub.Parent = menuchinh
 Tenhub.BackgroundTransparency = 1.000
@@ -169,17 +177,16 @@ UserInputService.InputBegan:Connect(function(input)
 		menuchinh.Visible = not menuchinh.Visible
 
 		if menuchinh.Visible then
-			hienanmenu.Text = "ON"
+            		hienanmenu.Text = "ON"
 			hienanmenu.TextColor3 = Color3.fromRGB(62, 255, 32)
 		else
-			hienanmenu.Text = "OFF"
+        			hienanmenu.Text = "OFF"
 			hienanmenu.TextColor3 = Color3.fromRGB(255, 0, 0)
 		end
 	end
 end)
 
 local script = Instance.new('Script', gamedeadrails)
-
 local gamedeadrails = script.Parent
 local khungmenudeadrails = gamedeadrails.Parent.Parent.khungmenudeadrails
 gamedeadrails.MouseButton1Click:Connect(function()
