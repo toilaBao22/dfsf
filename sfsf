@@ -27,6 +27,7 @@ local teletotrain = Instance.new("TextButton")
 local fixlag = Instance.new("TextButton")
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
 
 hienanmenu.Name = "hienanmenu"
 hienanmenu.Parent = ScreenGui
