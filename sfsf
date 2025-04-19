@@ -1,215 +1,223 @@
+local UserInputService = game:GetService("UserInputService")
+
 local ScreenGui = Instance.new("ScreenGui")
-local nuthienmenuchinh = Instance.new("TextButton")
-local khungmenuchinh = Instance.new("Frame")
-local khungmenuchinh2 = Instance.new("ScrollingFrame")
-local nutteletocastle = Instance.new("TextButton")
-local hienteletocastle = Instance.new("TextLabel")
-local nutteletoend = Instance.new("TextButton")
-local hienteletoend = Instance.new("TextLabel")
-local nutteletotesla = Instance.new("TextButton")
-local hienteletotesla = Instance.new("TextLabel")
-local nutteletophaodai = Instance.new("TextButton")
-local hienteletophaodai = Instance.new("TextLabel")
+local hienanmenu = Instance.new("TextLabel")
+local menuchinh = Instance.new("Frame")
+local Tenhub = Instance.new("TextLabel")
+local menucacgame = Instance.new("ScrollingFrame")
+local gamedeadrails = Instance.new("TextButton")
+local khungmenudeadrails = Instance.new("ScrollingFrame")
+local teletoend = Instance.new("TextButton")
+local teletocastle = Instance.new("TextButton")
+local teletotesla = Instance.new("TextButton")
+local teletofort = Instance.new("TextButton")
+local teletotrain = Instance.new("TextButton")
+local fixlag = Instance.new("TextButton")
 
+-- Setup GUI
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-nuthienmenuchinh.Name = "nut hien menu chinh"
-nuthienmenuchinh.Parent = ScreenGui
-nuthienmenuchinh.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-nuthienmenuchinh.BorderColor3 = Color3.fromRGB(0, 0, 0)
-nuthienmenuchinh.BorderSizePixel = 0
-nuthienmenuchinh.Position = UDim2.new(0.0702772439, 0, 0.202283844, 0)
-nuthienmenuchinh.Size = UDim2.new(0, 79, 0, 50)
-nuthienmenuchinh.Font = Enum.Font.SourceSans
-nuthienmenuchinh.TextColor3 = Color3.fromRGB(0, 0, 0)
-nuthienmenuchinh.TextSize = 14.000
-nuthienmenuchinh.Active = true
-nuthienmenuchinh.Draggable = true
+-- Button hiển thị trạng thái
+hienanmenu.Name = "hienanmenu"
+hienanmenu.Parent = ScreenGui
+hienanmenu.Active = true
+hienanmenu.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+hienanmenu.BackgroundTransparency = 0.500
+hienanmenu.Position = UDim2.new(0.871, 0, 0.918, 0)
+hienanmenu.Size = UDim2.new(0, 200, 0, 50)
+hienanmenu.Font = Enum.Font.SourceSans
+hienanmenu.Text = "ON"
+hienanmenu.TextColor3 = Color3.fromRGB(62, 255, 32)
+hienanmenu.TextSize = 44.000
 
-khungmenuchinh.Name = "khungmenuchinh"
-khungmenuchinh.Parent = ScreenGui
-khungmenuchinh.Active = true
-khungmenuchinh.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-khungmenuchinh.BackgroundTransparency = 0.400
-khungmenuchinh.BorderColor3 = Color3.fromRGB(0, 0, 0)
-khungmenuchinh.BorderSizePixel = 0
-khungmenuchinh.Position = UDim2.new(0.170212761, 0, 0.0505709611, 0)
-khungmenuchinh.Size = UDim2.new(0, 334, 0, 557)
-khungmenuchinh.Draggable = true
-khungmenuchinh.Visible = false
+-- Menu chính
+menuchinh.Name = "menuchinh"
+menuchinh.Parent = ScreenGui
+menuchinh.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+menuchinh.BackgroundTransparency = 0.300
+menuchinh.Position = UDim2.new(0.008, 0, 0.007, 0)
+menuchinh.Size = UDim2.new(0, 1892, 0, 870)
+menuchinh.Visible = true
 
-khungmenuchinh2.Name = "khungmenuchinh2"
-khungmenuchinh2.Parent = khungmenuchinh
-khungmenuchinh2.Active = true
-khungmenuchinh2.BackgroundColor3 = Color3.fromRGB(172, 255, 127)
-khungmenuchinh2.BackgroundTransparency = 0.350
-khungmenuchinh2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-khungmenuchinh2.BorderSizePixel = 0
-khungmenuchinh2.Position = UDim2.new(0.0962370932, 0, 0.0851567537, 0)
-khungmenuchinh2.Size = UDim2.new(0, 268, 0, 509)
+-- Tiêu đề Hub
+Tenhub.Name = "Tenhub"
+Tenhub.Parent = menuchinh
+Tenhub.BackgroundTransparency = 1.000
+Tenhub.Position = UDim2.new(0.035, 0, 0.056, 0)
+Tenhub.Size = UDim2.new(0, 225, 0, 50)
+Tenhub.Font = Enum.Font.SourceSans
+Tenhub.Text = "BaoxViet Hub"
+Tenhub.TextColor3 = Color3.fromRGB(255, 0, 0)
+Tenhub.TextSize = 46.000
+Tenhub.TextStrokeTransparency = 0.520
 
-nutteletocastle.Name = "nutteletocastle"
-nutteletocastle.Parent = khungmenuchinh2
-nutteletocastle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-nutteletocastle.BorderColor3 = Color3.fromRGB(0, 0, 0)
-nutteletocastle.BorderSizePixel = 0
-nutteletocastle.Position = UDim2.new(0.74253732, 0, 0.0153089119, 0)
-nutteletocastle.Size = UDim2.new(0, 42, 0, 47)
-nutteletocastle.Font = Enum.Font.SourceSans
-nutteletocastle.Text = ""
-nutteletocastle.TextColor3 = Color3.fromRGB(0, 0, 0)
-nutteletocastle.TextSize = 14.000
 
-hienteletocastle.Name = "hienteletocastle"
-hienteletocastle.Parent = khungmenuchinh2
-hienteletocastle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-hienteletocastle.BorderColor3 = Color3.fromRGB(0, 0, 0)
-hienteletocastle.BorderSizePixel = 0
-hienteletocastle.Position = UDim2.new(-0.0335820913, 0, 0.0137524558, 0)
-hienteletocastle.Size = UDim2.new(0, 200, 0, 50)
-hienteletocastle.Font = Enum.Font.SourceSans
-hienteletocastle.Text = "tele to castle"
-hienteletocastle.TextColor3 = Color3.fromRGB(0, 0, 0)
-hienteletocastle.TextSize = 22.000
-hienteletocastle.TextWrapped = true
+menucacgame.Name = "menucacgame"
+menucacgame.Parent = menuchinh
+menucacgame.Active = true
+menucacgame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+menucacgame.BackgroundTransparency = 0.650
+menucacgame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+menucacgame.BorderSizePixel = 0
+menucacgame.Position = UDim2.new(0.0350208245, 0, 0.13961862, 0)
+menucacgame.Size = UDim2.new(0, 468, 0, 724)
 
-nutteletoend.Name = "nutteletoend"
-nutteletoend.Parent = khungmenuchinh2
-nutteletoend.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-nutteletoend.BorderColor3 = Color3.fromRGB(0, 0, 0)
-nutteletoend.BorderSizePixel = 0
-nutteletoend.Position = UDim2.new(0.74253732, 0, 0.0722863674, 0)
-nutteletoend.Size = UDim2.new(0, 42, 0, 47)
-nutteletoend.Font = Enum.Font.SourceSans
-nutteletoend.Text = ""
-nutteletoend.TextColor3 = Color3.fromRGB(0, 0, 0)
-nutteletoend.TextSize = 14.000
+gamedeadrails.Name = "game dead rails"
+gamedeadrails.Parent = menucacgame
+gamedeadrails.BackgroundColor3 = Color3.fromRGB(255, 255, 127)
+gamedeadrails.BorderColor3 = Color3.fromRGB(255, 255, 255)
+gamedeadrails.BorderSizePixel = 0
+gamedeadrails.Position = UDim2.new(0.215297446, 0, 0.0254545454, 0)
+gamedeadrails.Size = UDim2.new(0, 290, 0, 50)
+gamedeadrails.Font = Enum.Font.SourceSans
+gamedeadrails.Text = "dead rails"
+gamedeadrails.TextColor3 = Color3.fromRGB(0, 0, 0)
+gamedeadrails.TextSize = 37.000
+gamedeadrails.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
 
-hienteletoend.Name = "hienteletoend"
-hienteletoend.Parent = khungmenuchinh2
-hienteletoend.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-hienteletoend.BorderColor3 = Color3.fromRGB(0, 0, 0)
-hienteletoend.BorderSizePixel = 0
-hienteletoend.Position = UDim2.new(-0.0335820913, 0, 0.0713815466, 0)
-hienteletoend.Size = UDim2.new(0, 200, 0, 44)
-hienteletoend.Font = Enum.Font.SourceSans
-hienteletoend.Text = "tele to end"
-hienteletoend.TextColor3 = Color3.fromRGB(0, 0, 0)
-hienteletoend.TextSize = 22.000
-hienteletoend.TextWrapped = true
+khungmenudeadrails.Name = "khungmenudeadrails"
+khungmenudeadrails.Parent = menuchinh
+khungmenudeadrails.Active = true
+khungmenudeadrails.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+khungmenudeadrails.BackgroundTransparency = 0.550
+khungmenudeadrails.BorderColor3 = Color3.fromRGB(0, 0, 0)
+khungmenudeadrails.BorderSizePixel = 0
+khungmenudeadrails.Position = UDim2.new(0.322613654, 0, 0.138564333, 0)
+khungmenudeadrails.Size = UDim2.new(0, 1240, 0, 724)
 
-nutteletotesla.Name = "nutteletotesla"
-nutteletotesla.Parent = khungmenuchinh2
-nutteletotesla.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-nutteletotesla.BorderColor3 = Color3.fromRGB(0, 0, 0)
-nutteletotesla.BorderSizePixel = 0
-nutteletotesla.Position = UDim2.new(0.74253732, 0, 0.126772121, 0)
-nutteletotesla.Size = UDim2.new(0, 42, 0, 47)
-nutteletotesla.Font = Enum.Font.SourceSans
-nutteletotesla.Text = ""
-nutteletotesla.TextColor3 = Color3.fromRGB(0, 0, 0)
-nutteletotesla.TextSize = 14.000
 
-hienteletotesla.Name = "hienteletotesla"
-hienteletotesla.Parent = khungmenuchinh2
-hienteletotesla.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-hienteletotesla.BorderColor3 = Color3.fromRGB(0, 0, 0)
-hienteletotesla.BorderSizePixel = 0
-hienteletotesla.Position = UDim2.new(-0.0335820913, 0, 0.124401249, 0)
-hienteletotesla.Size = UDim2.new(0, 200, 0, 50)
-hienteletotesla.Font = Enum.Font.SourceSans
-hienteletotesla.Text = "tele to tesla"
-hienteletotesla.TextColor3 = Color3.fromRGB(0, 0, 0)
-hienteletotesla.TextSize = 22.000
-hienteletotesla.TextWrapped = true
+teletoend.Name = "teletoend"
+teletoend.Parent = khungmenudeadrails
+teletoend.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+teletoend.BorderColor3 = Color3.fromRGB(0, 0, 0)
+teletoend.BorderSizePixel = 0
+teletoend.Position = UDim2.new(0.0857604356, 0, 0.0220057257, 0)
+teletoend.Size = UDim2.new(0, 1031, 0, 50)
+teletoend.Font = Enum.Font.SourceSans
+teletoend.Text = "teleport to end"
+teletoend.TextColor3 = Color3.fromRGB(0, 0, 0)
+teletoend.TextSize = 57.000
+teletoend.TextWrapped = true
 
-nutteletophaodai.Name = "nutteletophaodai"
-nutteletophaodai.Parent = khungmenuchinh2
-nutteletophaodai.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-nutteletophaodai.BorderColor3 = Color3.fromRGB(0, 0, 0)
-nutteletophaodai.BorderSizePixel = 0
-nutteletophaodai.Position = UDim2.new(0.74253732, 0, 0.187080815, 0)
-nutteletophaodai.Size = UDim2.new(0, 42, 0, 47)
-nutteletophaodai.Font = Enum.Font.SourceSans
-nutteletophaodai.Text = ""
-nutteletophaodai.TextColor3 = Color3.fromRGB(0, 0, 0)
-nutteletophaodai.TextSize = 14.000
+teletocastle.Name = "teletocastle"
+teletocastle.Parent = khungmenudeadrails
+teletocastle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+teletocastle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+teletocastle.BorderSizePixel = 0
+teletocastle.Position = UDim2.new(0.0857604356, 0, 0.0805272087, 0)
+teletocastle.Size = UDim2.new(0, 1031, 0, 50)
+teletocastle.Font = Enum.Font.SourceSans
+teletocastle.Text = "teleport to castle"
+teletocastle.TextColor3 = Color3.fromRGB(0, 0, 0)
+teletocastle.TextSize = 57.000
+teletocastle.TextWrapped = true
 
-hienteletophaodai.Name = "hienteletophaodai"
-hienteletophaodai.Parent = khungmenuchinh2
-hienteletophaodai.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-hienteletophaodai.BorderColor3 = Color3.fromRGB(0, 0, 0)
-hienteletophaodai.BorderSizePixel = 0
-hienteletophaodai.Position = UDim2.new(-0.0335820913, 0, 0.187269613, 0)
-hienteletophaodai.Size = UDim2.new(0, 200, 0, 50)
-hienteletophaodai.Font = Enum.Font.SourceSans
-hienteletophaodai.Text = "tele to pháo đài"
-hienteletophaodai.TextColor3 = Color3.fromRGB(0, 0, 0)
-hienteletophaodai.TextSize = 22.000
-hienteletophaodai.TextWrapped = true
+teletotrain.Name = "teletotrain"
+teletotrain.Parent = khungmenudeadrails
+teletotrain.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+teletotrain.BorderColor3 = Color3.fromRGB(0, 0, 0)
+teletotrain.BorderSizePixel = 0
+teletotrain.Position = UDim2.new(0.0857604356, 0, 0.240213349, 0)
+teletotrain.Size = UDim2.new(0, 1031, 0, 50)
+teletotrain.Font = Enum.Font.SourceSans
+teletotrain.Text = "teleport to train"
+teletotrain.TextColor3 = Color3.fromRGB(0, 0, 0)
+teletotrain.TextSize = 57.000
+teletotrain.TextWrapped = true
 
-	local script = Instance.new('Script', nuthienmenuchinh)
-	local nuthienmenuchinh = script.Parent
-	local khungmenuchinh = nuthienmenuchinh.Parent.khungmenuchinh
-	nuthienmenuchinh.MouseButton1Click:Connect(function()
-		khungmenuchinh.Visible = not khungmenuchinh.Visible
-	end)
+teletofort.Name = "teletofort"
+teletofort.Parent = khungmenudeadrails
+teletofort.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+teletofort.BorderColor3 = Color3.fromRGB(0, 0, 0)
+teletofort.BorderSizePixel = 0
+teletofort.Position = UDim2.new(0.0857604356, 0, 0.13657698, 0)
+teletofort.Size = UDim2.new(0, 1031, 0, 50)
+teletofort.Font = Enum.Font.SourceSans
+teletofort.Text = "teleport to fort"
+teletofort.TextColor3 = Color3.fromRGB(0, 0, 0)
+teletofort.TextSize = 57.000
+teletofort.TextWrapped = true
 
-	local script = Instance.new('Script', nutteletocastle)
-	local nutteletocastle = script.Parent
-	nutteletocastle.MouseButton1Click:Connect(function()
-		nutteletocastle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		if nutteletocastle.BackgroundColor3 == Color3.fromRGB(255, 255, 255) then
-			nutteletocastle.BackgroundColor3 = Color3.fromRGB(0, 0, 0) 	
+teletotrain.Name = "teletotrain"
+teletotrain.Parent = khungmenudeadrails
+teletotrain.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+teletotrain.BorderColor3 = Color3.fromRGB(0, 0, 0)
+teletotrain.BorderSizePixel = 0
+teletotrain.Position = UDim2.new(0.0857604356, 0, 0.200213349, 0)
+teletotrain.Size = UDim2.new(0, 1031, 0, 50)
+teletotrain.Font = Enum.Font.SourceSans
+teletotrain.Text = "teleport to train"
+teletotrain.TextColor3 = Color3.fromRGB(0, 0, 0)
+teletotrain.TextSize = 57.000
+teletotrain.TextWrapped = true
+
+fixlag.Name = "fixlag"
+fixlag.Parent = khungmenudeadrails
+fixlag.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+fixlag.BorderColor3 = Color3.fromRGB(0, 0, 0)
+fixlag.BorderSizePixel = 0
+fixlag.Position = UDim2.new(0.0857604356, 0, 0.251122437, 0)
+fixlag.Size = UDim2.new(0, 1031, 0, 50)
+fixlag.Font = Enum.Font.SourceSans
+fixlag.Text = "fix lag"
+fixlag.TextColor3 = Color3.fromRGB(0, 0, 0)
+fixlag.TextSize = 57.000
+fixlag.TextWrapped = true
+
+UserInputService.InputBegan:Connect(function(input)
+	if input.KeyCode == Enum.KeyCode.RightAlt then
+		menuchinh.Visible = not menuchinh.Visible
+
+		if menuchinh.Visible then
+			hienanmenu.Text = "ON"
+			hienanmenu.TextColor3 = Color3.fromRGB(62, 255, 32)
+		else
+			hienanmenu.Text = "OFF"
+			hienanmenu.TextColor3 = Color3.fromRGB(255, 0, 0)
 		end
-		if nutteletocastle.BackgroundColor3 == Color3.fromRGB(0, 0, 0) then
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/2dfeta/LamViet/refs/heads/main/Castletp.lua"))()
-			task.wait()
-			nutteletocastle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-			end
-	end)
-	
-	local script = Instance.new('Script', nutteletoend)
-	local nutteletoend = script.Parent
-	nutteletoend.MouseButton1Click:Connect(function()
-		nutteletoend.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		if nutteletoend.BackgroundColor3 == Color3.fromRGB(255, 255, 255) then
-			nutteletoend.BackgroundColor3 = Color3.fromRGB(0, 0, 0) 	
-		end
-		if nutteletoend.BackgroundColor3 == Color3.fromRGB(0, 0, 0) then
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/2dfeta/LamViet/refs/heads/main/teleport_to_end.lua"))()
-			task.wait()
-			nutteletoend.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-			end
-	end)
-	
+	end
+end)
 
-	local script = Instance.new('Script', nutteletotesla)
-	local nutteletotesla = script.Parent
-	nutteletotesla.MouseButton1Click:Connect(function()
-		nutteletotesla.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		if nutteletotesla.BackgroundColor3 == Color3.fromRGB(255, 255, 255) then
-			nutteletotesla.BackgroundColor3 = Color3.fromRGB(0, 0, 0) 	
-		end
-		if nutteletotesla.BackgroundColor3 == Color3.fromRGB(0, 0, 0) then
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/2dfeta/LamViet/refs/heads/main/Tptotesla%20(1).lua"))()
-			task.wait()
-			nutteletotesla.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-			end
-	end)
-	
-	local script = Instance.new('Script', nutteletophaodai)
-	local nutteletophaodai = script.Parent
-	nutteletophaodai.MouseButton1Click:Connect(function()
-		nutteletophaodai.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		if nutteletophaodai.BackgroundColor3 == Color3.fromRGB(255, 255, 255) then
-			nutteletophaodai.BackgroundColor3 = Color3.fromRGB(0, 0, 0) 	
-		end
-		if nutteletophaodai.BackgroundColor3 == Color3.fromRGB(0, 0, 0) then
+local script = Instance.new('Script', gamedeadrails)
 
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/2dfeta/LamViet/refs/heads/main/Tpfort.lua"))()
-			task.wait()
-			nutteletophaodai.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-			end
+local gamedeadrails = script.Parent
+local khungmenudeadrails = gamedeadrails.Parent.Parent.khungmenudeadrails
+gamedeadrails.MouseButton1Click:Connect(function()
+	khungmenudeadrails.Visible = true
+end)
+
+local script = Instance.new('Script', teletoend)
+local teletoend = script.Parent
+teletoend.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/2dfeta/LamViet/refs/heads/main/teleport_to_end.lua"))()
+end)
+
+local script = Instance.new('Script', teletocastle)
+local teletocastle = script.Parent
+teletocastle.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/2dfeta/LamViet/refs/heads/main/Castletp.lua"))()
+end)
+
+local script = Instance.new('Script', teletotesla)
+local teletotesla = script.Parent
+teletotesla.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://github.com/2dfeta/LamViet/blob/main/Tptotesla%20(1).lua"))()
+end)
+
+local script = Instance.new('Script', teletofort)
+local teletofort = script.Parent
+teletofort.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/2dfeta/LamViet/refs/heads/main/Tpfort.lua"))()
+end)
+
+local script = Instance.new('Script', teletotrain)
+local teletotrain = script.Parent
+teletotrain.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/2dfeta/LamViet/refs/heads/main/tele_to_train.lua"))()
+end)
+
+	local script = Instance.new('Script', fixlag)
+	local fixlag = script.Parent
+	fixlag.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/2dfeta/LamViet/refs/heads/main/fixlag"))()
 	end)
