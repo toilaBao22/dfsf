@@ -1,231 +1,131 @@
+local UserInputService = game:GetService("UserInputService")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+
+-- Thông báo khi mở game
 game.StarterGui:SetCore("SendNotification", {
     Title = "Script Bao X Viet Hub";
-    Text = "Make  by Bao and Viet ";
+    Text = "Make by Bao and Viet";
     Duration = 10;
 })
-
 game.StarterGui:SetCore("SendNotification", {
     Title = "How to open menu??";
-    Text = " Alt Right  to open menu ";  
+    Text = "Alt Right to open menu";
     Duration = 10;
 })
 
-local UserInputService = game:GetService("UserInputService")
-
-local ScreenGui = Instance.new("ScreenGui")
-local hienanmenu = Instance.new("TextLabel")
-local menuchinh = Instance.new("Frame")
-local Tenhub = Instance.new("TextLabel")
-local menucacgame = Instance.new("ScrollingFrame")
-local gamedeadrails = Instance.new("TextButton")
-local khungmenudeadrails = Instance.new("ScrollingFrame")
-local teletoend = Instance.new("TextButton")
-local teletocastle = Instance.new("TextButton")
-local teletotesla = Instance.new("TextButton")
-local teletofort = Instance.new("TextButton")
-local teletotrain = Instance.new("TextButton")
-local fixlag = Instance.new("TextButton")
-
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+-- GUI khởi tạo
+local ScreenGui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
 ScreenGui.ResetOnSpawn = false
+ScreenGui.Name = "ScreenGui"
 
+-- Nút bật/tắt menu
+local hienanmenu = Instance.new("TextLabel", ScreenGui)
 hienanmenu.Name = "hienanmenu"
-hienanmenu.Parent = ScreenGui
-hienanmenu.Active = true
 hienanmenu.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-hienanmenu.BackgroundTransparency = 0.500
-hienanmenu.Position = UDim2.new(0.871, 0, 0.918, 0)
-hienanmenu.Size = UDim2.new(0, 200, 0, 50)
+hienanmenu.BackgroundTransparency = 0.5
+hienanmenu.Position = UDim2.new(0.85, 0, 0.92, 0)
+hienanmenu.Size = UDim2.new(0.12, 0, 0.07, 0)
 hienanmenu.Font = Enum.Font.SourceSans
 hienanmenu.Text = "OFF"
-		hienanmenu.TextColor3 = Color3.fromRGB(255, 0, 0)
-hienanmenu.TextSize = 44.000
+hienanmenu.TextColor3 = Color3.fromRGB(255, 0, 0)
+hienanmenu.TextSize = 44
 
+-- Frame chính
+local menuchinh = Instance.new("Frame", ScreenGui)
 menuchinh.Name = "menuchinh"
-menuchinh.Parent = ScreenGui
 menuchinh.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-menuchinh.BackgroundTransparency = 0.300
-menuchinh.Position = UDim2.new(0.008, 0, 0.007, 0)
-menuchinh.Size = UDim2.new(0, 1892, 0, 870)
+menuchinh.BackgroundTransparency = 0.3
+menuchinh.Position = UDim2.new(0.01, 0, 0.01, 0)
+menuchinh.Size = UDim2.new(0.95, 0, 0.9, 0)
 menuchinh.Visible = false
 
+-- Tên hub
+local Tenhub = Instance.new("TextLabel", menuchinh)
 Tenhub.Name = "Tenhub"
-Tenhub.Parent = menuchinh
-Tenhub.BackgroundTransparency = 1.000
+Tenhub.BackgroundTransparency = 1
 Tenhub.Position = UDim2.new(0.035, 0, 0.056, 0)
 Tenhub.Size = UDim2.new(0, 225, 0, 50)
 Tenhub.Font = Enum.Font.SourceSans
-Tenhub.Text = "BaoxViet Hub"
+Tenhub.Text = "Bao x Viet Hub"
 Tenhub.TextColor3 = Color3.fromRGB(255, 0, 0)
-Tenhub.TextSize = 46.000
-Tenhub.TextStrokeTransparency = 0.520
+Tenhub.TextSize = 46
 
-
+-- Menu chọn game
+local menucacgame = Instance.new("ScrollingFrame", menuchinh)
 menucacgame.Name = "menucacgame"
-menucacgame.Parent = menuchinh
-menucacgame.Active = true
 menucacgame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-menucacgame.BackgroundTransparency = 0.650
-menucacgame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+menucacgame.BackgroundTransparency = 0.65
 menucacgame.BorderSizePixel = 0
-menucacgame.Position = UDim2.new(0.0350208245, 0, 0.13961862, 0)
-menucacgame.Size = UDim2.new(0, 468, 0, 724)
+menucacgame.Position = UDim2.new(0.03, 0, 0.14, 0)
+menucacgame.Size = UDim2.new(0.23, 0, 0.8, 0)
+menucacgame.CanvasSize = UDim2.new(0, 0, 1, 0)
 
+-- Nút game dead rails
+local gamedeadrails = Instance.new("TextButton", menucacgame)
 gamedeadrails.Name = "game dead rails"
-gamedeadrails.Parent = menucacgame
 gamedeadrails.BackgroundColor3 = Color3.fromRGB(255, 255, 127)
-gamedeadrails.BorderColor3 = Color3.fromRGB(255, 255, 255)
 gamedeadrails.BorderSizePixel = 0
-gamedeadrails.Position = UDim2.new(0.215297446, 0, 0.0254545454, 0)
-gamedeadrails.Size = UDim2.new(0, 290, 0, 50)
+gamedeadrails.Position = UDim2.new(0.1, 0, 0.03, 0)
+gamedeadrails.Size = UDim2.new(0.8, 0, 0.06, 0)
 gamedeadrails.Font = Enum.Font.SourceSans
 gamedeadrails.Text = "dead rails"
 gamedeadrails.TextColor3 = Color3.fromRGB(0, 0, 0)
-gamedeadrails.TextSize = 37.000
+gamedeadrails.TextSize = 37
 gamedeadrails.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
 
+-- Frame menu dead rails
+local khungmenudeadrails = Instance.new("ScrollingFrame", menuchinh)
 khungmenudeadrails.Name = "khungmenudeadrails"
-khungmenudeadrails.Parent = menuchinh
-khungmenudeadrails.Active = true
 khungmenudeadrails.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-khungmenudeadrails.BackgroundTransparency = 0.550
-khungmenudeadrails.BorderColor3 = Color3.fromRGB(0, 0, 0)
+khungmenudeadrails.BackgroundTransparency = 0.55
 khungmenudeadrails.BorderSizePixel = 0
-khungmenudeadrails.Position = UDim2.new(0.322613654, 0, 0.138564333, 0)
-khungmenudeadrails.Size = UDim2.new(0, 1240, 0, 724)
+khungmenudeadrails.Position = UDim2.new(0.3, 0, 0.14, 0)
+khungmenudeadrails.Size = UDim2.new(0.67, 0, 0.8, 0)
+khungmenudeadrails.CanvasSize = UDim2.new(0, 0, 2, 0)
+khungmenudeadrails.Visible = false
 
+-- Hàm tạo nút
+local function createButton(name, text, yPos, url)
+	local button = Instance.new("TextButton", khungmenudeadrails)
+	button.Name = name
+	button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	button.BorderSizePixel = 0
+	button.Position = UDim2.new(0.075, 0, yPos, 0)
+	button.Size = UDim2.new(0.85, 0, 0.07, 0)
+	button.Font = Enum.Font.SourceSans
+	button.Text = text
+	button.TextColor3 = Color3.fromRGB(0, 0, 0)
+	button.TextSize = 44
+	button.TextWrapped = true
+	button.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet(url))()
+	end)
+end
 
-teletoend.Name = "teletoend"
-teletoend.Parent = khungmenudeadrails
-teletoend.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-teletoend.BorderColor3 = Color3.fromRGB(0, 0, 0)
-teletoend.BorderSizePixel = 0
-teletoend.Position = UDim2.new(0.0857604356, 0, 0.0220057257, 0)
-teletoend.Size = UDim2.new(0, 1031, 0, 50)
-teletoend.Font = Enum.Font.SourceSans
-teletoend.Text = "teleport to end"
-teletoend.TextColor3 = Color3.fromRGB(0, 0, 0)
-teletoend.TextSize = 57.000
-teletoend.TextWrapped = true
+-- Các nút chức năng
+createButton("teletoend", "Teleport to End", 0.02, "https://raw.githubusercontent.com/2dfeta/LamViet/refs/heads/main/teleport_to_end.lua")
+createButton("teletocastle", "Teleport to Castle", 0.11, "https://raw.githubusercontent.com/2dfeta/LamViet/refs/heads/main/Castletp.lua")
+createButton("teletofort", "Teleport to Fort", 0.20, "https://raw.githubusercontent.com/2dfeta/LamViet/refs/heads/main/Tpfort.lua")
+createButton("teletotrain", "Teleport to Train", 0.29, "https://raw.githubusercontent.com/2dfeta/LamViet/refs/heads/main/tele_to_train.lua")
+createButton("fixlag", "Fix Lag", 0.38, "https://raw.githubusercontent.com/2dfeta/LamViet/refs/heads/main/fixlag")
 
-teletocastle.Name = "teletocastle"
-teletocastle.Parent = khungmenudeadrails
-teletocastle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-teletocastle.BorderColor3 = Color3.fromRGB(0, 0, 0)
-teletocastle.BorderSizePixel = 0
-teletocastle.Position = UDim2.new(0.0857604356, 0, 0.0805272087, 0)
-teletocastle.Size = UDim2.new(0, 1031, 0, 50)
-teletocastle.Font = Enum.Font.SourceSans
-teletocastle.Text = "teleport to castle"
-teletocastle.TextColor3 = Color3.fromRGB(0, 0, 0)
-teletocastle.TextSize = 57.000
-teletocastle.TextWrapped = true
-
-teletotrain.Name = "teletotrain"
-teletotrain.Parent = khungmenudeadrails
-teletotrain.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-teletotrain.BorderColor3 = Color3.fromRGB(0, 0, 0)
-teletotrain.BorderSizePixel = 0
-teletotrain.Position = UDim2.new(0.0857604356, 0, 0.240213349, 0)
-teletotrain.Size = UDim2.new(0, 1031, 0, 50)
-teletotrain.Font = Enum.Font.SourceSans
-teletotrain.Text = "teleport to train"
-teletotrain.TextColor3 = Color3.fromRGB(0, 0, 0)
-teletotrain.TextSize = 57.000
-teletotrain.TextWrapped = true
-
-teletofort.Name = "teletofort"
-teletofort.Parent = khungmenudeadrails
-teletofort.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-teletofort.BorderColor3 = Color3.fromRGB(0, 0, 0)
-teletofort.BorderSizePixel = 0
-teletofort.Position = UDim2.new(0.0857604356, 0, 0.13657698, 0)
-teletofort.Size = UDim2.new(0, 1031, 0, 50)
-teletofort.Font = Enum.Font.SourceSans
-teletofort.Text = "teleport to fort"
-teletofort.TextColor3 = Color3.fromRGB(0, 0, 0)
-teletofort.TextSize = 57.000
-teletofort.TextWrapped = true
-
-teletotrain.Name = "teletotrain"
-teletotrain.Parent = khungmenudeadrails
-teletotrain.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-teletotrain.BorderColor3 = Color3.fromRGB(0, 0, 0)
-teletotrain.BorderSizePixel = 0
-teletotrain.Position = UDim2.new(0.0857604356, 0, 0.200213349, 0)
-teletotrain.Size = UDim2.new(0, 1031, 0, 50)
-teletotrain.Font = Enum.Font.SourceSans
-teletotrain.Text = "teleport to train"
-teletotrain.TextColor3 = Color3.fromRGB(0, 0, 0)
-teletotrain.TextSize = 57.000
-teletotrain.TextWrapped = true
-
-fixlag.Name = "fixlag"
-fixlag.Parent = khungmenudeadrails
-fixlag.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-fixlag.BorderColor3 = Color3.fromRGB(0, 0, 0)
-fixlag.BorderSizePixel = 0
-fixlag.Position = UDim2.new(0.0857604356, 0, 0.251122437, 0)
-fixlag.Size = UDim2.new(0, 1031, 0, 50)
-fixlag.Font = Enum.Font.SourceSans
-fixlag.Text = "fix lag"
-fixlag.TextColor3 = Color3.fromRGB(0, 0, 0)
-fixlag.TextSize = 57.000
-fixlag.TextWrapped = true
-
-UserInputService.InputBegan:Connect(function(input)
-	if input.KeyCode == Enum.KeyCode.RightAlt then
-		menuchinh.Visible = not menuchinh.Visible
-
-		if menuchinh.Visible then
-            		hienanmenu.Text = "ON"
-			hienanmenu.TextColor3 = Color3.fromRGB(62, 255, 32)
-		else
-        			hienanmenu.Text = "OFF"
-			hienanmenu.TextColor3 = Color3.fromRGB(255, 0, 0)
-		end
-	end
-end)
-
-local script = Instance.new('Script', gamedeadrails)
-local gamedeadrails = script.Parent
-local khungmenudeadrails = gamedeadrails.Parent.Parent.khungmenudeadrails
+-- Kích hoạt menu dead rails khi click
 gamedeadrails.MouseButton1Click:Connect(function()
 	khungmenudeadrails.Visible = true
 end)
 
-local script = Instance.new('Script', teletoend)
-local teletoend = script.Parent
-teletoend.MouseButton1Click:Connect(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/2dfeta/LamViet/refs/heads/main/teleport_to_end.lua"))()
+-- Mở menu bằng Alt phải
+UserInputService.InputBegan:Connect(function(input, gameProcessed)
+	if gameProcessed then return end
+	if input.KeyCode == Enum.KeyCode.RightAlt then
+		menuchinh.Visible = not menuchinh.Visible
+		if menuchinh.Visible then
+			hienanmenu.Text = "ON"
+			hienanmenu.TextColor3 = Color3.fromRGB(62, 255, 32)
+		else
+			hienanmenu.Text = "OFF"
+			hienanmenu.TextColor3 = Color3.fromRGB(255, 0, 0)
+		end
+	end
 end)
-
-local script = Instance.new('Script', teletocastle)
-local teletocastle = script.Parent
-teletocastle.MouseButton1Click:Connect(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/2dfeta/LamViet/refs/heads/main/Castletp.lua"))()
-end)
-
-local script = Instance.new('Script', teletotesla)
-local teletotesla = script.Parent
-teletotesla.MouseButton1Click:Connect(function()
-	loadstring(game:HttpGet("https://github.com/2dfeta/LamViet/blob/main/Tptotesla%20(1).lua"))()
-end)
-
-local script = Instance.new('Script', teletofort)
-local teletofort = script.Parent
-teletofort.MouseButton1Click:Connect(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/2dfeta/LamViet/refs/heads/main/Tpfort.lua"))()
-end)
-
-local script = Instance.new('Script', teletotrain)
-local teletotrain = script.Parent
-teletotrain.MouseButton1Click:Connect(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/2dfeta/LamViet/refs/heads/main/tele_to_train.lua"))()
-end)
-
-	local script = Instance.new('Script', fixlag)
-	local fixlag = script.Parent
-	fixlag.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/2dfeta/LamViet/refs/heads/main/fixlag"))()
-	end)
